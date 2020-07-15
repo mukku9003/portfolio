@@ -1,0 +1,193 @@
+	
+<style type="text/css">
+	@import url(https://fonts.googleapis.com/css?family=Just+Another+Hand);
+
+
+footer, nav, {
+	display: block;
+}
+
+ul {
+	list-style: none;
+}
+
+
+a{
+	text-decoration:none;
+}
+
+.inner:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+input:focus,select:focus,textarea:focus,a:focus,select:focus,option:focus{
+	outline:none;
+}
+
+
+/*-----------BACKGROUND-----------*/
+
+.footer2 .inner{
+	background: gold;
+}
+
+/*-----------INNER--------------------*/
+.footer2 .inner{
+	width:950px;
+	
+}
+
+
+
+.footer2 {
+width: 100%;
+}
+
+.footer2 .inner {
+	margin: 0 auto;
+}
+
+.footer2 .right{
+	display: block;
+	
+	margin:4em 5% 4em 0;
+
+}
+
+.footer2 .menu:after{
+
+height: 2px;
+content: "";
+position: absolute;
+width: 100%;
+top: 1.5em;
+
+}
+
+.footer2 nav ul li{
+	font-size:1.3em;
+	display: inline;
+    list-style: none;
+
+}
+
+.footer2 .menu ul li a{
+	-webkit-transition: all 200ms cubic-bezier(0.895, 0.030, 0.685, 0.220); 
+   -moz-transition: all 200ms cubic-bezier(0.895, 0.030, 0.685, 0.220); 
+    -ms-transition: all 200ms cubic-bezier(0.895, 0.030, 0.685, 0.220); 
+     -o-transition: all 200ms cubic-bezier(0.895, 0.030, 0.685, 0.220); 
+        transition: all 200ms cubic-bezier(0.895, 0.030, 0.685, 0.220);
+}
+
+.footer2 .menu ul li:first-child:before{
+	content:"";
+	margin-left: -1.1em;
+}
+
+.footer2 .menu ul li:before{
+content: "|";
+position: relative;
+margin-left: 0.85em;
+margin-right: 1.1em;
+}
+
+.footer2 .menu{
+	position: relative;
+	
+}
+
+
+.footer2 ul.sub{
+	font-size: 0.5em;
+	margin-top: 1em;
+}
+.footer2 ul.sub li{
+	display: block;
+	float: none;
+	border:none !important;
+	width: 100%;
+
+}
+
+
+
+
+/*MEDIA QUERIES*/
+@media screen and (max-width:950px) {
+	.footer2 .inner{
+	width: 100%;
+	}
+}
+
+@media screen and (max-width:890px) {
+
+ 
+
+
+.footer2 .right{
+	float: none;
+	margin: 3em 0 0 0;
+
+}
+
+.footer2 .menu ul{
+	margin: 0;
+	text-align: center;
+}
+
+
+
+}
+
+@media screen and (max-width:550px) {
+	.footer2 nav ul li {
+display: block;
+	margin-top: 0.5em;
+}
+
+.footer2 .menu ul li:before{
+	content:"";
+	margin:0;
+
+}
+
+.footer2 .menu ul li:first-child:before {
+content: "";
+margin-left: 0;
+}
+
+.footer2 .menu:after{
+display: none;
+}
+
+ 
+
+
+
+</style>
+
+	<body>
+	<!-- --------------------------HTML DU MODULE------------------------- -->
+		<footer class="footer2">
+			
+				<div class="right">
+					<nav class="menu">
+						<ul>
+							<li><a href="http://indianstudbook.com" class="anch_cls" >Home</a></li>
+							<li><a href="http://indianstudbook.com/nfft_rtgs_details.php" class="anch_cls2" >NEFT / RTGS</a></li>
+							<li><a href="http://indianstudbook.com/horse_name.php" class="anch_cls2" >Name Availability</a></li>
+							<li><a href="http://indianstudbook.com/horse_search.php" class="anch_cls2" >Horse Search</a></li>
+            				<li><a target="_blank" type="application/pdf" href="http://indianstudbook.com/download_file/Rules and Requirements  - 24 February 2020.pdf" class="anch_cls2">Rules and Requirements</a></li>
+							<li><a href="http://indianstudbook.com/publications.php" class="anch_cls2" >Publications </a></li>
+							<li><a href="http://indianstudbook.com/download.php" class="anch_cls2" >Downloads </a></li>
+							<li><a href="http://indianstudbook.com/contact.php" class="anch_cls2" >Contact Us </a></li>
+							
+						</ul>
+					</nav>
+				</div>
+			
+		</footer>
+		
+	</body>
+
