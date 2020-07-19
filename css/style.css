@@ -1,12 +1,23 @@
+html{
+	scroll-behavior: smooth;
+}
+
 *{
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	
+}
+
+body{
+	font-family: cursive;
 }
 
 .navig{
-	background: #fff;
+	background: rgb(255,255,255);
+	
 	box-shadow: 0 10px 30px 0 rgba(138, 155, 165, 0.15);
+	color: #fff;
 }
 
 .navbar-nav li a{
@@ -33,3 +44,293 @@
 .navbar-nav li a:hover:before{
 	width: 80%;
 }	
+
+
+/* .name-div{
+	padding-top: 100px;
+} */
+
+.img-div{
+	padding-left: 20rem!important;
+	align-items: center;
+}
+
+.main-sec{
+	height: 650px;
+	padding-top: 8rem!important;
+	
+	/* background: rgb(36,1,121);
+background: linear-gradient(90deg, rgba(36,1,121,1) 4%, rgba(136,79,185,1) 65%, rgba(2,81,97,1) 98%);
+	 */
+}
+
+.sub_section{
+    background-color: #fbfafd;
+}
+
+
+.para-div{
+	margin-left: 20px;
+	font-size: 1.3em;
+}
+
+.icns{
+	
+	margin-top: .2em;
+	font-size: 5em;
+	color: #f16529;
+}
+
+.icns-css{
+	
+	margin-top: .2em;
+	font-size: 5em;
+	color: #0070ba;
+}
+
+.icns-php{
+	
+	margin-top: .2em;
+	font-size: 5em;
+	color: #777bb3;
+}
+
+.icns-bs{
+	
+	margin-top: .2em;
+	font-size: 5em;
+	color: #7952b3;
+}
+
+.icns-js{
+	
+	margin-top: .2em;
+	font-size: 5em;
+	color: rgb(240, 219, 79);
+	
+}
+
+.icns-mysql{
+	/* 
+	margin-top: .2em; */
+	font-size: 5em;
+	color: rgb(240, 219, 79);
+	
+}
+
+@media only screen and (max-width: 620px) {
+	.img-div{
+		padding-left: 4rem!important;
+		align-items: center;
+	}
+
+	.intro{
+		padding: 2em !important;
+	}
+	.icns{
+		
+		margin-top: .2em;
+		font-size: 5em;
+		color: #f16529;
+	}
+	
+	.icns-css{
+		
+		margin-top: .2em;
+		font-size: 5em;
+		color: #0070ba;
+	}
+	
+	.icns-php{
+		
+		margin-top: .2em;
+		font-size: 5em;
+		color: #777bb3;
+	}
+	
+	.icns-bs{
+		
+		margin-top: .2em;
+		font-size: 5em;
+		color: #7952b3;
+	}
+	
+	.icns-js{
+		
+		margin-top: .2em;
+		font-size: 5em;
+		color: rgb(240, 219, 79);
+		
+	}
+	
+	.icns-mysql{
+		
+		margin-top: .2em;
+		font-size: 5em;
+		color: rgb(240, 219, 79);
+		
+	}
+
+	.dyn-info{
+		height: 100px;
+	}
+
+	
+
+
+
+}
+
+.sl-icns .navbar-nav li a{
+	text-transform: uppercase;
+	font-size: 2em;
+	font-weight: 600;
+	letter-spacing: 2px;
+	color: black;
+	position: relative;
+}
+
+
+.name-f{
+	font-size: 1.2em;
+	font-weight: 600;
+	color: #ff7230;
+}
+
+
+#scBtn{
+	display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 40px;
+    z-index: 99;
+    outline: none;
+    background-color: #00A8FF;
+    color: black;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+#scBtn:hover{
+    background: #606060;
+}
+
+
+.v-sc{
+	font-size: 1em;
+}
+
+
+
+
+  .loader {
+	  position: fixed;
+	  left: 0;
+	  top: 0;
+	  width: 100%;
+	  height: 100%;
+	  z-index: 99;
+	  background: url() 50% 50% no-repeat rgb(249,249,249);
+  }
+ 
+
+  	.loader-container {
+		height: 100%;
+		margin: 0;
+		background: #ccc;
+		color: #666;
+		font-family: open sans;
+		padding: 0;
+  	}
+
+
+  .preloader {
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	position: relative;
+  }
+  
+  .description {
+	position: absolute;
+	bottom: 10px;
+	left: 12px;
+  }
+  
+  .loader-container {
+	cursor: default;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  
+  
+  .preloader-dots {
+	height: 100px;
+	width: 200px;
+  }
+  
+  .preloader-dots .dot {
+	display: inline-block;
+	
+	background: #f16529;
+	height: 28px;
+	width: 28px;
+	opacity: 0.3;
+	border-radius: 50%;
+	animation: moveit 1.8s infinite;
+
+  }
+  
+  .dot:nth-child(2) {
+	animation-delay: .15s;
+	background: #c2430c;
+  }
+  
+  .dot:nth-child(3) {
+	animation-delay: .3s;
+	background: black;
+  }
+  
+  .dot:nth-child(4) {
+	animation-delay: .45s;
+	background: green;
+  }
+  
+  .dot:nth-child(5) {
+	animation-delay: .6s;
+	background: blue;
+  }
+  
+  @keyframes moveit {
+	0% {
+	  transform: translateY(0px);
+	}
+	35% {
+	  transform: translateY(0px);
+	  opacity: 0.3;
+	}
+	50% {
+	  transform: translateY(-20px);
+	  opacity: 0.8;
+	}
+	70% {
+	  transform: translateY(3px);
+	  opacity: 0.8;
+	}
+	85% {
+	  transform: translateY(-3px);
+	}
+  }
+  
+  
+
+
+
