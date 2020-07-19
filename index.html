@@ -388,6 +388,12 @@
 	
 	});
 
+	$('.nav-link').click(function(){
+		$('.nav-link').removeClass('active').css('color', '');
+		$(this).addClass('active').css('color', 'orange');
+		
+	});
+
 
 
 		mybutton = document.getElementById("scBtn");
