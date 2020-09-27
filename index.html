@@ -51,6 +51,11 @@
 								<a class="nav-link" href="#myprojects">My Work</a>
 							</li>
 
+							<li class="nav-item">
+								<a class="nav-link" href="#img-gallery">Image Gallery</a>
+							</li>
+							
+
 		      			</ul>
 		    		</div>
 		  		</div>
@@ -362,8 +367,8 @@
 					
 				</div>
 			</div>
-			<div class="main_div">
-				<div class="section_header text-center mb-5 mt-4">
+			<div class="main_div" id="img-gallery">
+				<div class="section_header text-center mb-2 mt-4">
 					<h1>Image Gallery</h1>
 				</div>
 				<div id="hori-img" class="center_div">
@@ -447,7 +452,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
-	<!-- <script>
+	<script>
 
         window.fbAsyncInit = function() {
           FB.init({
@@ -464,7 +469,7 @@
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
 
-  </script> -->
+  </script>
 
 	<script>
 		const quotes = document.getElementById("quotes");
@@ -635,7 +640,7 @@
 				img.setAttribute("class", "img-gal")
 				document.getElementById('hori-img').appendChild(img);
 				img.src = `https://picsum.photos/200/300?random=${val.id}`;
-			console.log(val.url);
+			//console.log(val);
 
 			})
 		})
