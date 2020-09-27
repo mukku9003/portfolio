@@ -214,6 +214,25 @@
 				</div>
 			</div>
 
+			<div class="container-fluid sub_section pb-5 pt-5" id="quotes_div">
+				<div class="section_header text-center mb-5 mt-4">
+					<h1>Quotes</h1>
+				</div>
+				<div class="row justify-content-center align-items-center">
+					<div class="box">
+						<div class="text">
+							<i class="start-quote fas fa-quote-left"></i>
+							<p id="quotes" class="quotes"></p>
+							<p id="author" class="author"></p>
+							<!-- <i class="start-quote fas fa-quote-right"></i> -->
+						</div>
+							
+							<button id="generate_quotes" class="btn btn-warning text-center mt-5">New Quotes</button>
+							<button id="tweetMe" class="btn btn-primary text-center mt-5"><span class="fab fa-twitter"> </span> twitter</button>
+					</div>
+				</div>
+			</div>
+
 			<div class="container-fluid sub_section pb-5 pt-5" id="myprojects"> 
 				<div class="section_header text-center mb-5 mt-4">
 					<h1>My Work</h1>
@@ -436,8 +455,41 @@
       }(document, 'script', 'facebook-jssdk'));</script>
 
 	<script>
+		const quotes = document.getElementById("quotes");
+		const author = document.getElementById("author");
+		const generate_quotes = document.getElementById("generate_quotes");
+		const tweetMe = document.getElementById("tweetMe");
+		let dataApi = "";
+		let allQuotes = "";
 
+		const tweetOnTweeter = () => {
+			let tweet = `https://twitter.com/intent/tweet?text=${allQuotes.en}`;
+			window.open(tweet);
+		}
+		const getLatestQuotes = () => {
+			let uniqNum = Math.floor(Math.random() * 10);
+			//console.log(dataApi[uniqNum]);
+			allQuotes = dataApi[uniqNum];
+			quotes.innerText = `${allQuotes.en}`;
 
+			allQuotes.author == null ? author.innerText = " - Unknown" : author.innerText = ` - ${allQuotes.author}`;
+
+		}
+		const getapidata = async () => {
+			try {
+				let apiDatas = await fetch("https://programming-quotes-api.herokuapp.com/quotes/lang/en");
+				dataApi = await apiDatas.json();
+				//console.log(dataApi[1].en);
+				getLatestQuotes();
+
+			}catch(error){
+
+			}
+		}		
+		
+		tweetMe.addEventListener("click", tweetOnTweeter);
+		generate_quotes.addEventListener("click",getLatestQuotes)
+		getapidata();
 
 	$(window).load(function() {
 		$(".loader").fadeOut(1000);
