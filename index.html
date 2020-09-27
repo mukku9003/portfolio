@@ -362,6 +362,15 @@
 					
 				</div>
 			</div>
+			<div class="main_div">
+				<div class="section_header text-center mb-5 mt-4">
+					<h1>Image Gallery</h1>
+				</div>
+				<div id="hori-img" class="center_div">
+				</div>
+
+				
+			</div>
 
 		</div>
 		<!-- Load Facebook SDK for JavaScript -->
@@ -438,7 +447,8 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
-	<script>
+	<!-- <script>
+
         window.fbAsyncInit = function() {
           FB.init({
             xfbml            : true,
@@ -452,7 +462,9 @@
         js = d.createElement(s); js.id = id;
         js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
         fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));</script>
+      }(document, 'script', 'facebook-jssdk'));
+
+  </script> -->
 
 	<script>
 		const quotes = document.getElementById("quotes");
@@ -607,6 +619,28 @@
 		duration: 1000,
 		offset: 150, 
 	});
+	</script>
+
+
+	<script type="text/javascript">
+		fetch("https://jsonplaceholder.typicode.com/photos?_limit=20")
+		.then((apiPhoto) => {
+			//console.log(apiPhoto);
+			return apiPhoto.json();
+		})
+		.then((jsonPhoto) => {
+			jsonPhoto.map((val) => {
+				key = val.id;
+				let img = document.createElement("img");
+				img.setAttribute("class", "img-gal")
+				document.getElementById('hori-img').appendChild(img);
+				img.src = `https://picsum.photos/200/300?random=${val.id}`;
+			console.log(val.url);
+
+			})
+		})
+
+
 	</script>
   </body>
 </html>
