@@ -636,3 +636,15 @@ background: linear-gradient(90deg, rgba(36,1,121,1) 4%, rgba(136,79,185,1) 65%, 
 .center_div::-webkit-scrollbar{
 	overflow: hidden;
 }
+
+.iframe_div{
+	position: relative;
+	height: 0;
+	width: 100%;
+	padding-bottom:5%;
+}
+/*  iframe{
+	
+padding: 25px;	
+	
+} */
