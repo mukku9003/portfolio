@@ -648,3 +648,39 @@ background: linear-gradient(90deg, rgba(36,1,121,1) 4%, rgba(136,79,185,1) 65%, 
 padding: 25px;	
 	
 } */
+
+
+/* new for project*/
+.images {
+  border-radius: 50%;
+  border-color: #c0c0c0;
+  border-width: 3px;
+  border-style: solid;
+  max-width: 100%;
+}
+
+
+
+#wrapper .text {
+  position:relative;
+  bottom:75px;
+  left:0px;
+  visibility:hidden;
+
+}
+
+#wrapper:hover .text {
+  visibility:visible;
+}
+
+.link:hover {
+  opacity: 0.2;
+}
+
+.text {
+  color: black;
+  font-size: 3vmin;
+  font-family: Amatic SC;
+  font-weight: bold;
+  
+}
