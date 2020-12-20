@@ -497,21 +497,21 @@
 		const getLatestQuotes = () => {
 			let uniqNum = Math.floor(Math.random() * 10);
 			//console.log(dataApi[uniqNum]);
-			allQuotes = dataApi[uniqNum];
-			quotes.innerText = `${allQuotes.en}`;
+			allQuotes = dataApi;
+			quotes.innerText = `${allQuotes.text}`;
 
 			allQuotes.author == null ? author.innerText = " - Unknown" : author.innerText = ` - ${allQuotes.author}`;
 
 		}
 		const getapidata = async () => {
 			try {
-				let apiDatas = await fetch("https://programming-quotes-api.herokuapp.com/quotes/lang/en");
+				let apiDatas = await fetch("https://simple-quotes-api.herokuapp.com/random");
 				dataApi = await apiDatas.json();
-				//console.log(dataApi[1].en);
+				//console.log(dataApi);
 				getLatestQuotes();
 
 			}catch(error){
-
+				alert("Quotes Not Geting");
 			}
 		}		
 		
